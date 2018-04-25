@@ -24,7 +24,7 @@
         <!--Sexe-->
         <label for="Sexe">Quel est votre genre :</label>
         <label for="homme">Homme</label>
-        <input type="radio" id="homme" name="Sexe" value="masculin">
+        <input type="radio" id="homme" name="Sexe" value="masculin" required>
         <label for="femme">Femme</label>
         <input type="radio" id="femme" name="Sexe" value="feminin"> 
 
@@ -34,7 +34,7 @@
 
         <!--Téléphone-->
         <label for="Tel">Téléphone :</label>
-        <input type="tel" name="Tel" id="tel" required>
+        <input type="tel" name="Tel" id="tel" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" required>
     
         <!--CGU-->
         <label for="cgu">J'accepte les CGU :</label>
