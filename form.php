@@ -11,14 +11,8 @@
 <body>
     
     <section>
-        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="POST">
-        $sexe = $_POST['sexe']; //
-$nom = $_POST['nom']; //
-$prenom = $_POST['prenom']; //
-$mail = $_POST['mail']; //
-$num = $_POST['num']; //
-$message = $_POST['message'];
-$cgu1 = $_POST['cgu']; //
+        <form action="verif_form.php" method="POST">
+
         <!--Nom-->
         <label for="Nom">Nom :</label>
         <input type="text" name="Nom" id="nom" required>
@@ -28,29 +22,31 @@ $cgu1 = $_POST['cgu']; //
         <input type="text" name="Prenom" id="prenom" required>
 
         <!--Sexe-->
-        <label for="sexe">Quel est votre genre :</label>
+        <label for="Sexe">Quel est votre genre :</label>
         <label for="homme">Homme</label>
-        <input type="radio" id="homme" name="sexe" value="masculin">
+        <input type="radio" id="homme" name="Sexe" value="masculin">
         <label for="femme">Femme</label>
-        <input type="radio" id="femme" name="sexe" value="feminin"> 
+        <input type="radio" id="femme" name="Sexe" value="feminin"> 
 
         <!--Adresse mail-->
         <label for="Email">Adresse mail :</label>
-        <input type="email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+        <input type="email" name="Email" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
 
         <!--Téléphone-->
         <label for="Tel">Téléphone :</label>
-        <input type="tel" name="Tel" pattern="#(^\+[0-9]{2}|^\+[0-9]{2}\(0\)|^\(\+[0-9]{2}\)\(0\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\-\s]{10}$)#" required>
+        <input type="tel" name="Tel" id="tel" required>
     
         <!--CGU-->
         <label for="cgu">J'accepte les CGU :</label>
-        <input type="checkbox" name="cgu">
+        <input type="checkbox" name="CGU" id ="cgu" required>
 
         <!--Message-->
         <label for="Message"></label>
         <textarea name="Message" id="message" cols="30" rows="10" required></textarea>
         
+        <!--Submit + check form-->
         <input type="submit" value="Envoyer">
+        
         </form>
     </section>
 
